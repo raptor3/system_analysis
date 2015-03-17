@@ -31,7 +31,7 @@ _dropdb:
 
 makemigrations:
 	@echo "Running migrations"
-	@python manage.py makemigrations -v 0
+	## @python manage.py makemigrations -v 0
 
 migrate:
 	@echo "Running migrations"
