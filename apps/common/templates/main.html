@@ -1,0 +1,85 @@
+{% load i18n %}
+{% load static %}
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Hadoopecosystemtable.github.io : This page is a summary to keep the track of Hadoop related project, and relevant projects around Big Data scene focused on the open source, free software enviroment." />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="{% static "css/stylesheet.css" %}">
+
+    <title>The Hadoop Ecosystem</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="{% url 'main' %}">Home</a>
+          <h1 id="project_title">The Hadoop Ecosystem</h1>
+
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+
+<section id="main_content" class="inner">
+
+<table class="example3">
+<tr>
+<th colspan="3">Choose your structure</th>
+</tr>
+<tr>
+<td width="30%">Choose your structure</td>
+<td> This is our lab number one. fuck eeee </td>
+<td width="20%"><a href="{% url 'hadoo_choice_main' %}">Go</a>
+</tr>
+<tr>
+
+<tr>
+
+<th colspan="3">Hierarchical levels </th>
+</tr>
+<tr>
+<td width="20%">Data storage</td>
+<td>The core of Apache Hadoop consists of a storage part and a processing part.</td>
+<td width="20%"><a href="{% url 'storagepart_and_processingpart' %}">See all</a>
+</tr>
+<tr>
+<td width="20%">Programming</td>
+<td>The core of Apache Hadoop consists of a storage part and a processing part.</td>
+<td width="20%"><a href="{% url 'storagepart_and_processingpart' %}">See all</a>
+</tr>
+<tr>
+</tr>
+
+<tr>
+<th colspan="3">The Hadoop Ecosystem Table </th>
+</tr>
+<tr>
+<td width="20%">See more</td>
+<td>If you want learn hadoop.</td>
+<td width="20%"><a href="{% url 'hadoopecosystemtable' %}">All component</a></td>
+</tr>
+
+</tr>
+</table>
+
+</section>
+
+    </div>
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p>Authors: Avakumiv Taras, Truskovskyi Kyryl, Fed Volodimir
+        </p>
+      </footer>
+    </div>
+
+  </body>
+</html>

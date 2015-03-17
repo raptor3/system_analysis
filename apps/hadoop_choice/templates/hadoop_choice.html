@@ -1,0 +1,172 @@
+{% extends "base.html" %}
+
+{% load widget_tweaks %}
+
+{% block content %}
+    <table class="example3">
+        <form method="post" id="id1">
+            <div class="col-sm-12">
+                <h1>Data Storage</h1>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <legend>Distributed Filesystem</legend>
+                        {% for field in form_distributed_filesystem %}
+                            {% if field.errors %}
+                                <div class="control-group error">
+                                    <label class="control-label">{{ field.label }}</label>
+                                    <div class="controls">{{ field }}
+                        <span class="help-inline">
+                            {% for error in  field.errors %}{{ error }}{% endfor %}
+                        </span>
+                                    </div>
+                                </div>
+                            {% else %}
+                                <div class="control-group">
+                                    <label class="control-label">{{ field.label }}</label>
+
+                                    <div class="control">{{ field | attr:"class:form-control" }}
+                                        {% if field.help_text %}
+                                            <p class="help-inline">
+                                                <small>{{ field.help_text }}</small>
+                                            </p>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <legend>SQL on Hadoop</legend>
+                        {% for field in form_sql_on_hadoop %}
+                            {% if field.errors %}
+                                <div class="control-group error">
+                                    <label class="control-label">{{ field.label }}</label>
+
+                                    <div class="controls">{{ field }}
+                        <span class="help-inline">
+                            {% for error in  field.errors %}{{ error }}{% endfor %}
+                        </span>
+                                    </div>
+                                </div>
+                            {% else %}
+                                <div class="control-group">
+                                    <label class="control-label">{{ field.label }}</label>
+
+                                    <div class="control">{{ field | attr:"class:form-control" }}
+                                        {% if field.help_text %}
+                                            <p class="help-inline">
+                                                <small>{{ field.help_text }}</small>
+                                            </p>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <legend>Choice Algorithm</legend>
+                        {% for field in choice_algorithm %}
+                            {% if field.errors %}
+                                <div class="control-group error">
+                                    <label class="control-label">{{ field.label }}</label>
+
+                                    <div class="controls">{{ field }}
+                        <span class="help-inline">
+                            {% for error in  field.errors %}{{ error }}{% endfor %}
+                        </span>
+                                    </div>
+                                </div>
+                            {% else %}
+                                <div class="control-group">
+                                    <label class="control-label">{{ field.label }}</label>
+
+                                    <div class="control">{{ field | attr:"class:form-control" }}
+                                        {% if field.help_text %}
+                                            <p class="help-inline">
+                                                <small>{{ field.help_text }}</small>
+                                            </p>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12">
+                <h1>Programming</h1>
+
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <legend>Machine Learning</legend>
+                        {% for field in form_machine_learning %}
+                            {% if field.errors %}
+                                <div class="control-group error">
+                                    <label class="control-label">{{ field.label }}</label>
+
+                                    <div class="controls">{{ field }}
+                        <span class="help-inline">
+                            {% for error in  field.errors %}{{ error }}{% endfor %}
+                        </span>
+                                    </div>
+                                </div>
+                            {% else %}
+                                <div class="control-group">
+                                    <label class="control-label">{{ field.label }}</label>
+
+                                    <div class="control">{{ field | attr:"class:form-control" }}
+                                        {% if field.help_text %}
+                                            <p class="help-inline">
+                                                <small>{{ field.help_text }}</small>
+                                            </p>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <legend>Distributed Programming</legend>
+                        {% for field in form_distributed_programming %}
+                            {% if field.errors %}
+                                <div class="control-group error">
+                                    <label class="control-label">{{ field.label }}</label>
+
+                                    <div class="controls">{{ field }}
+                        <span class="help-inline">
+                            {% for error in  field.errors %}{{ error }}{% endfor %}
+                        </span>
+                                    </div>
+                                </div>
+                            {% else %}
+                                <div class="control-group">
+                                    <label class="control-label">{{ field.label }}</label>
+
+                                    <div class="control">{{ field | attr:"class:form-control" }}
+                                        {% if field.help_text %}
+                                            <p class="help-inline">
+                                                <small>{{ field.help_text }}</small>
+                                            </p>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12">
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">Run</button>
+                </div>
+            </div>
+        </form>
+    </table>
+
+{% endblock content %}

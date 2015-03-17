@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% load widget_tweaks %}
+
+{% block content %}
+    <table class="example3">
+        {% for k, v in some_dict.items %}
+            <div class="container-fluid">
+                <p class="bg-primary">{{ k }}</br></p>
+
+                {% if k == "DistributedFilesystem" %}
+                    <a href="{% url 'create_distributed_filesystem' %}">Add new</a>
+                {% elif k == "MachineLearning" %}
+                    <a href="{% url 'create_machine_learning' %}">Add new</a>
+                {% elif k == "DistributedProgramming" %}
+                    <a href="{% url 'create_distributed_programming' %}">Add new</a>
+                {% elif k == "SQLonHadoop" %}
+                    <a href="{% url 'create_sql_on_hadoop' %}">Add new</a>
+                {% endif %}
+
+            </div>
+
+
+            <div class="container-fluid">
+                <ul>
+                    <!--{{ v|join:"<br/>" }}-->
+                    {% for item in v %}
+                        <li><p class="bg-info">{{ item }}</p></li>
+                    {% endfor %}
+
+                </ul>
+            </div>
+        {% endfor %}
+        <a href="{% url 'delete_all_model' %}">Delete all</a>
+    </table>
+
+{% endblock content %}

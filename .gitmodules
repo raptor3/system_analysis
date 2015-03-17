@@ -1,0 +1,3 @@
+[submodule "apps/hadoopecosystem/hadoopecosystemtable"]
+	path = apps/hadoopecosystem/hadoopecosystemtable
+	url = git://github.com/hadoopecosystemtable/hadoopecosystemtable.github.io.git

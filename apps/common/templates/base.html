@@ -1,0 +1,32 @@
+{% load i18n %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/bootstrap.css">
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/stylesheet.css">
+
+    <title>{% block title %}Title{% endblock title %}</title>
+    {% block extra_head %}{% endblock extra_head %}
+</head>
+<body>
+
+<div id="header_wrap" class="outer">
+    <header class="inner">
+       <a id="forkme_banner" href="{% url 'main' %}">Home</a>
+
+        <h1 id="project_title">The Hadoop Ecosystem</h1>
+
+    </header>
+</div>
+
+<div id="main_content_wrap" class="outer">
+    <section id="main_content" class="inner">
+        {% block content %}{% endblock content %}
+    </section>
+</div>
+
+</body>
+</html>
